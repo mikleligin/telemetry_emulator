@@ -49,6 +49,12 @@ namespace CppCLRWinFormsProject {
 	private: System::Windows::Forms::DataVisualization::Charting::Chart^ chart1;
 	private: System::Windows::Forms::TextBox^ textBox1;
 	private: System::Windows::Forms::Button^ button2;
+	private: System::Windows::Forms::TextBox^ textBox2;
+	private: System::Windows::Forms::Button^ button3;
+	private: System::Windows::Forms::TextBox^ p;
+	private: System::Windows::Forms::TextBox^ i;
+	private: System::Windows::Forms::TextBox^ d;
+	private: System::Windows::Forms::Label^ label1;
 	private: System::ComponentModel::IContainer^ components;
 
 	private:
@@ -64,8 +70,8 @@ namespace CppCLRWinFormsProject {
 		void InitializeComponent(void)
 		{
 			this->components = (gcnew System::ComponentModel::Container());
-			System::Windows::Forms::DataVisualization::Charting::ChartArea^ chartArea5 = (gcnew System::Windows::Forms::DataVisualization::Charting::ChartArea());
-			System::Windows::Forms::DataVisualization::Charting::Legend^ legend5 = (gcnew System::Windows::Forms::DataVisualization::Charting::Legend());
+			System::Windows::Forms::DataVisualization::Charting::ChartArea^ chartArea8 = (gcnew System::Windows::Forms::DataVisualization::Charting::ChartArea());
+			System::Windows::Forms::DataVisualization::Charting::Legend^ legend8 = (gcnew System::Windows::Forms::DataVisualization::Charting::Legend());
 			this->serialPort1 = (gcnew System::IO::Ports::SerialPort(this->components));
 			this->comboBox1 = (gcnew System::Windows::Forms::ComboBox());
 			this->button1 = (gcnew System::Windows::Forms::Button());
@@ -74,6 +80,12 @@ namespace CppCLRWinFormsProject {
 			this->chart1 = (gcnew System::Windows::Forms::DataVisualization::Charting::Chart());
 			this->textBox1 = (gcnew System::Windows::Forms::TextBox());
 			this->button2 = (gcnew System::Windows::Forms::Button());
+			this->textBox2 = (gcnew System::Windows::Forms::TextBox());
+			this->button3 = (gcnew System::Windows::Forms::Button());
+			this->p = (gcnew System::Windows::Forms::TextBox());
+			this->i = (gcnew System::Windows::Forms::TextBox());
+			this->d = (gcnew System::Windows::Forms::TextBox());
+			this->label1 = (gcnew System::Windows::Forms::Label());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->chart1))->BeginInit();
 			this->SuspendLayout();
 			// 
@@ -114,10 +126,10 @@ namespace CppCLRWinFormsProject {
 			this->chart1->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom)
 				| System::Windows::Forms::AnchorStyles::Left)
 				| System::Windows::Forms::AnchorStyles::Right));
-			chartArea5->Name = L"ChartArea1";
-			this->chart1->ChartAreas->Add(chartArea5);
-			legend5->Name = L"Legend1";
-			this->chart1->Legends->Add(legend5);
+			chartArea8->Name = L"ChartArea1";
+			this->chart1->ChartAreas->Add(chartArea8);
+			legend8->Name = L"Legend1";
+			this->chart1->Legends->Add(legend8);
 			this->chart1->Location = System::Drawing::Point(180, 14);
 			this->chart1->Name = L"chart1";
 			this->chart1->Size = System::Drawing::Size(563, 387);
@@ -144,11 +156,72 @@ namespace CppCLRWinFormsProject {
 			this->button2->UseVisualStyleBackColor = true;
 			this->button2->Click += gcnew System::EventHandler(this, &Form1::button2_Click);
 			// 
+			// textBox2
+			// 
+			this->textBox2->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Right));
+			this->textBox2->Location = System::Drawing::Point(803, 127);
+			this->textBox2->Name = L"textBox2";
+			this->textBox2->Size = System::Drawing::Size(100, 22);
+			this->textBox2->TabIndex = 12;
+			this->textBox2->TextChanged += gcnew System::EventHandler(this, &Form1::textBox2_TextChanged);
+			// 
+			// button3
+			// 
+			this->button3->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Right));
+			this->button3->Location = System::Drawing::Point(817, 214);
+			this->button3->Name = L"button3";
+			this->button3->Size = System::Drawing::Size(75, 23);
+			this->button3->TabIndex = 13;
+			this->button3->Text = L"send";
+			this->button3->UseVisualStyleBackColor = true;
+			this->button3->Click += gcnew System::EventHandler(this, &Form1::button3_Click);
+			// 
+			// p
+			// 
+			this->p->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Right));
+			this->p->Location = System::Drawing::Point(814, 186);
+			this->p->Name = L"p";
+			this->p->Size = System::Drawing::Size(22, 22);
+			this->p->TabIndex = 14;
+			// 
+			// i
+			// 
+			this->i->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Right));
+			this->i->Location = System::Drawing::Point(842, 186);
+			this->i->Name = L"i";
+			this->i->Size = System::Drawing::Size(22, 22);
+			this->i->TabIndex = 15;
+			// 
+			// d
+			// 
+			this->d->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Right));
+			this->d->Location = System::Drawing::Point(870, 186);
+			this->d->Name = L"d";
+			this->d->Size = System::Drawing::Size(22, 22);
+			this->d->TabIndex = 16;
+			// 
+			// label1
+			// 
+			this->label1->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Right));
+			this->label1->AutoSize = true;
+			this->label1->Location = System::Drawing::Point(814, 164);
+			this->label1->Name = L"label1";
+			this->label1->Size = System::Drawing::Size(81, 20);
+			this->label1->TabIndex = 17;
+			this->label1->Text = L"P      I      D";
+			this->label1->Click += gcnew System::EventHandler(this, &Form1::label1_Click);
+			// 
 			// Form1
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(1022, 538);
+			this->Controls->Add(this->label1);
+			this->Controls->Add(this->d);
+			this->Controls->Add(this->i);
+			this->Controls->Add(this->p);
+			this->Controls->Add(this->button3);
+			this->Controls->Add(this->textBox2);
 			this->Controls->Add(this->button2);
 			this->Controls->Add(this->textBox1);
 			this->Controls->Add(this->chart1);
@@ -224,7 +297,6 @@ int time = 0;
 				}
 
 				//listBox1->Items->Add(parse_value[0] + "=" + parse_value[1]);
-
 				//file_to_write->Write(parse_value[0] + "=" + parse_value[1] + "/");
 				for (int i = 0; i < chart1->Series->Count; i++)
 				{
@@ -235,9 +307,46 @@ int time = 0;
 				}
 			}
 		}
+	private:
+		void show_pid(String^ str)
+		{
+			int index = str->IndexOf(':');
+			int sindex = str->IndexOf(';');
+			String^ sub; //str->Substring(index + 1, sindex);
+			for (size_t i = index; i < sindex; i++)
+			{
+				sub += str[i];
+			}
+			array<String^>^ pid = gcnew array<String^>(3);
+			for (int i = 0; i < 3; i++)
+			{
+				int ind = sub->IndexOf("=");
+				int ind2 = sub->IndexOf(",");
+				for (int k = ind + 1; k < ind2; k++)
+				{
+					pid[i] += sub[k];
+				}
+				sub = sub->Remove(ind, 1);
+				ind2 = sub->IndexOf(",");
+				sub = sub->Remove(ind2, 1);
+			}
+			textBox2->Text = "p="+pid[0]+" i="+pid[1]+" d="+pid[2];
+		}
 	private: System::Void timer1_Tick(System::Object^ sender, System::EventArgs^ e) {
 		String^ parse_str = serialPort1->ReadLine();
-		draw_chart(parse_str, time);
+		array<String^>^ parse_by_stick = parse_str->Split('|');
+		if (parse_by_stick->Length > 0)
+		{
+			for (size_t i = 0; i < parse_by_stick->Length; i++)
+			{
+				if (parse_by_stick[i]->IndexOf("PID") >= 0) {
+					show_pid(parse_by_stick[i]);
+				}
+				if (parse_by_stick[i]->IndexOf("SIN") >= 0) {
+					draw_chart(parse_by_stick[i], time);
+				}
+			}
+		}
 		time += 1;
 		
 	}
@@ -313,6 +422,24 @@ private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e
 	
 	fl->Close();
 	
+}
+private: System::Void textBox2_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void button3_Click(System::Object^ sender, System::EventArgs^ e) {
+	String^ _p = p->Text;
+	String^ _i = i->Text;
+	String^ _d = d->Text;
+	try
+	{
+		serialPort1->Write("PID:p=" + _p + ",i=" + _i + ",d=" + _d + ",;|");
+	}
+	catch (...)
+	{
+		MessageBox::Show(nullptr, "Choose COM port", "Ya perdole kurva bober", MessageBoxButtons::OK, MessageBoxIcon::Error);
+		return;
+	}
+}
+private: System::Void label1_Click(System::Object^ sender, System::EventArgs^ e) {
 }
 };
 }
