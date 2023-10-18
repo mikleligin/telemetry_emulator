@@ -1,0 +1,4 @@
+D:\telemetry_scan\serial_reader\serial_reader\x64\Debug\serial_reader.vcxproj.AssemblyReference.cache
+D:\telemetry_scan\serial_reader\serial_reader\x64\Debug\serial_reader.vcxproj.SuggestedBindingRedirects.cache
+D:\telemetry_scan\serial_reader\serial_reader\x64\Debug\serial_reader.Form1.resources
+D:\telemetry_scan\serial_reader\serial_reader\x64\Debug\serial_reader.vcxproj.GenerateResource.cache
