@@ -6,7 +6,7 @@
 String stri = "";
 String getPID()
 {
-  return "PID:p=2,i=3,d=4,;";
+  return "PID:p=2,i=3,d=4,;|";
 }
 void setup() {
   Serial.begin(9600);
@@ -42,7 +42,7 @@ String setPID(String str)
     sub[ind]=' ';
     sub[ind2]=' ';
   }
-  return "PID:p="+pid[0]+",i="+pid[1]+","+"d="+pid[2]+",|";
+  return "PID:p="+pid[0]+",i="+pid[1]+","+"d="+pid[2]+",;|";
 }
 float i = -90;
 void sendSin()
@@ -87,9 +87,9 @@ void loop() {
     }
     
   }
-  //sendPID();
+  sendPID();
   sendSin();
-  delay(100);
+  delay(50);
   
   // put your main code here, to run repeatedly:
 
